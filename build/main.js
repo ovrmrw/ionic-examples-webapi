@@ -59514,7 +59514,7 @@ var HomePage = (function (_super) {
     HomePage.prototype.ionViewDidLoad = function () {
         var _this = this;
         console.log('ionViewDidLoad - HomePage');
-        this.disposable = this.service.getUsers()
+        this.disposable = this.service.getUsers(50)
             .subscribe(function (users) {
             _this.users = users;
         });
