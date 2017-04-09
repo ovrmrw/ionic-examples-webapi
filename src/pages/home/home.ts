@@ -26,7 +26,7 @@ export class HomePage extends Disposer {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad - HomePage')
-    this.disposable = this.service.getUsers()
+    this.disposable = this.service.getUsers(50)
       .subscribe(users => {
         this.users = users
       })
