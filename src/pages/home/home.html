@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="selectUser(user)">
+      <ion-avatar item-left>
+        <img [src]="user.picture.thumbnail">
+      </ion-avatar>
+      <h2>{{ user.login.username }}</h2>
+      <p>{{ user.name.first + ' ' + user.name.last }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
